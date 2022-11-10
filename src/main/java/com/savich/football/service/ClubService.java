@@ -14,8 +14,7 @@ import java.util.Random;
 @Service
 public class ClubService {
     private final ClubRepository clubRepository;
-    private static final List<String> CLABNAMES = Arrays.asList("Nnnn", "Mmmmm", "Kkkkk", "Ppppppp", "Llllll");
-    private final Random random = new Random();
+
 
     @Autowired
     public ClubService(ClubRepository clubRepository) {
@@ -56,13 +55,6 @@ public class ClubService {
 
         return clubRepository.findByName(name);
     }
-
-//    public Club generateRandomClub() {
-//        Club club = new Club();
-//        club.setName(CLABNAMES.get(random.nextInt(CLABNAMES.size())));
-//        clubRepository.save(club);
-//        return club;
-//    }
 
 
 }
