@@ -72,33 +72,7 @@ class PlayerServiceTest {
             verify(playerRepository).save(playerToUpdate);
         }
     }
-//    @Test
-//    void shouldReturnStatusOkWhenCallUpdatePlayerById() {
-//        long id = 3;
-//        Player player = new Player();
-//        player.setName("NewPlayer");
-//        Optional<Player> playerToFind = playerRepository.findById(id);
-//
-//        if (playerToFind.isPresent()) {
-//            Player playerToUpdate = playerToFind.get();
-//            player.setName(player.getName());
-//            HttpStatus result = playerService.updatePlayerById(id, player);
-//            assertThat(result).isEqualTo(HttpStatus.OK);
-//        }
-//    }
-//
-//    @Test
-//    void shouldReturnStatusCreatedWhenCallUpdatePlayerById() {
-//        long id = 3;
-//        Player player = new Player();
-//        player.setName("NewPlayer");
-//        Optional<Player> playerToFind = playerRepository.findById(id);
-//
-//        if (!playerToFind.isPresent()) {
-//            HttpStatus result = playerService.updatePlayerById(id, player);
-//            assertThat(result).isEqualTo(HttpStatus.CREATED);
-//        }
-//    }
+
 
     @Test
     void shouldReturnStatusOkWhenCallDeletePlayerById() {

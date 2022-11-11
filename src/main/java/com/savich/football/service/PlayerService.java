@@ -23,11 +23,6 @@ public class PlayerService {
     }
 
     public Player getPlayerById(Long id) {
-//        if (playerRepository.existsById(id)) {
-//            Player player= playerRepository.findById(id).get();
-//            return player;
-//        }
-//        return null;
         return playerRepository.findById(id).orElseThrow(() -> new RuntimeException("No player with this id"));
     }
 
@@ -42,9 +37,6 @@ public class PlayerService {
         Player playerToUpdate = playerToFindOptional.get();
         playerToUpdate.setName(player.getName());
         playerToUpdate.setAge(player.getAge());
-      //  Club playerClub=player.getClub();
-     //   long idClub=playerClub.getId();
-       // playerToUpdate.setClub(player.getClub());
         playerRepository.save(playerToUpdate);
     }
 
