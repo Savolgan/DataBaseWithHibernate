@@ -11,7 +11,6 @@ import java.util.List;
 public interface PlayerRepository extends JpaRepository<Player, Long> {
     @Query(value = "SELECT *  FROM player p where p.id_club =:id_club", nativeQuery = true)
     List<Player> findPlayersBiIdClub(@Param("id_club") int id_club);
-
     List<Player> findByAge(int age);
 
     @Query("SELECT p FROM Player p where p.age < :playerAge  ")

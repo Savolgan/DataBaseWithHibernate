@@ -21,7 +21,6 @@ public class ClubService {
         this.clubRepository = clubRepository;
     }
 
-
     public List<Club> getAllClubs() {
         return clubRepository.findAll();
     }

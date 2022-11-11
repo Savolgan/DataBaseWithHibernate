@@ -35,7 +35,6 @@ public class ClubController {
         return new ResponseEntity<>(HttpStatus.BAD_GATEWAY);
     }
 
-
     @PostMapping
     public ResponseEntity<Club> createClub(@RequestBody Club club) {
         return new ResponseEntity<>(clubService.createClub(club));

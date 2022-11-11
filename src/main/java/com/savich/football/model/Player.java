@@ -26,7 +26,6 @@ public class Player {
     public Player() {
     }
 
-
     public Long getId() {
         return id;
     }
